@@ -1,0 +1,182 @@
+/* ===================== ABOUT ACHIEVEMENTS ===================== */
+.about__achievement {
+    margin-top: 3rem;
+}
+
+.about__achievemets__container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+    align-items: center;
+}
+
+.about__achievemets__left img {
+    border-radius: 12px;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.about__achievemets__right h1 {
+    line-height: 1.2;
+}
+
+.about__achievemets__right p {
+    margin: 1.6rem 0 2.5rem;
+}
+
+.achievements__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.achievement__card {
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.achievement__card:hover {
+    background: var(--color-bg2);
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.5rem);
+}
+
+.achievemet__icon {
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 0.8rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.achievement__card:nth-child(2) .achievemet__icon {
+    background: var(--color-success);
+}
+
+.achievement__card:nth-child(3) .achievemet__icon {
+    background: var(--color-primary);
+}
+
+
+/* ===================== TEAM MEMBERS ===================== */
+.team {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.team__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team__member {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.team__member:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team__member-image {
+    width: 100%;
+    height: 15rem;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.team__member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0);
+    transition: var(--transition);
+}
+
+.team__member:hover .team__member-image img {
+    filter: saturate(1);
+    transform: scale(1.05);
+}
+
+.team__member-info h4 {
+    margin-bottom: 0.5rem;
+}
+
+.team__member-info p {
+    color: var(--color-light);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.team__members-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.team__members-socials a {
+    background: var(--color-bg1);
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.team__member:hover .team__members-socials a {
+    background: var(--color-primary);
+}
+
+.team__members-socials a:hover {
+    transform: scale(1.1);
+}
+
+
+/* ===================== MEDIA QUERIES (TABLETS) ===================== */
+@media screen and (max-width: 1024px) {
+    .about__achievemets__container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .about__achievemets__left {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .team__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* ===================== MEDIA QUERIES (PHONES) ===================== */
+@media screen and (max-width: 600px) {
+    .achievements__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .team__container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .team__member {
+        padding: 1.5rem;
+    }
+}
